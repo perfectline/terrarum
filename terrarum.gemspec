@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tanel Suurhans", "Tarmo Lehtpuu"]
-  s.date = %q{2010-09-09}
+  s.date = %q{2010-09-10}
   s.description = %q{Contains generators and data for Country and Language models.}
   s.email = ["tanel.suurhans@perfectline.ee", "tarmo.lehtpuu@perfectline.ee"]
   s.extra_rdoc_files = [
@@ -18,10 +18,12 @@ Gem::Specification.new do |s|
   s.files = [
     "README.markdown",
      "install.rb",
-     "lib/generators/country/country_generator.rb",
-     "lib/generators/country/templates/migration.rb",
-     "lib/generators/country/templates/model.rb",
-     "lib/generators/language/language_generator.rb",
+     "lib/generators/countries/countries_generator.rb",
+     "lib/generators/countries/templates/migration.rb",
+     "lib/generators/countries/templates/model.rb",
+     "lib/generators/languages/languages_generator.rb",
+     "lib/generators/languages/templates/migration.rb",
+     "lib/generators/languages/templates/model.rb",
      "lib/terrarum.rb",
      "lib/terrarum/version.rb",
      "rails/init.rb"
@@ -38,17 +40,11 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<rails>, [">= 3.0.0"])
-      s.add_development_dependency(%q<rspec>, [">= 2.0.0.beta.20"])
-      s.add_development_dependency(%q<diff-lcs>, [">= 1.1.2"])
     else
       s.add_dependency(%q<rails>, [">= 3.0.0"])
-      s.add_dependency(%q<rspec>, [">= 2.0.0.beta.20"])
-      s.add_dependency(%q<diff-lcs>, [">= 1.1.2"])
     end
   else
     s.add_dependency(%q<rails>, [">= 3.0.0"])
-    s.add_dependency(%q<rspec>, [">= 2.0.0.beta.20"])
-    s.add_dependency(%q<diff-lcs>, [">= 1.1.2"])
   end
 end
 

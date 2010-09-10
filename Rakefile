@@ -16,9 +16,7 @@ Jeweler::Tasks.new do |jewel|
   jewel.authors         = ["Tanel Suurhans", "Tarmo Lehtpuu"]
   jewel.files           = FileList["rails/*.rb", "lib/**/*.rb", "*.rb", "MIT-LICENCE", "README.markdown"]
 
-  jewel.add_dependency             'rails',       '>= 3.0.0'
-  jewel.add_development_dependency 'rspec',       '>= 2.0.0.beta.20'
-  jewel.add_development_dependency 'diff-lcs',    '>= 1.1.2'
+  jewel.add_dependency  'rails', '>= 3.0.0'
 end
 
 desc 'Generate documentation plugin.'
@@ -28,10 +26,4 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.options << '--line-numbers' << '--inline-source'
   rdoc.rdoc_files.include('README.markdown')
   rdoc.rdoc_files.include('lib/**/*.rb')
-end
-
-desc 'Run all rspec tests'
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.pattern    = "spec/**/*_spec.rb"
-  spec.spec_opts  = ["--options", "spec/spec.opts"]
 end
