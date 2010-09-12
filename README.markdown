@@ -30,7 +30,7 @@ You can also override the default model names for both generators:
 
 ## Authors
 
-**Tanel Suurhans** (<http://twitter.com/tanelsuurhans>)
+**Tanel Suurhans** (<http://twitter.com/tanelsuurhans>)  
 **Tarmo Lehtpuu** (<http://twitter.com/tarmolehtpuu>)
 
 ## License
