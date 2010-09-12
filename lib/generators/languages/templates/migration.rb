@@ -939,8 +939,8 @@ class <%= migration_class_name %> < ActiveRecord::Migration
 
     default_language = <%= class_name %>.find_by_name('English')
 
-    execute("UPDATE shops SET language_id = #{default_<%= class_name %>.id}")
-    execute("ALTER TABLE shops ALTER COLUMN language_id SET DEFAULT #{default_<%= class_name %>.id}")
+    execute("UPDATE shops SET language_id = #{default_language.id}")
+    execute("ALTER TABLE shops ALTER COLUMN language_id SET DEFAULT #{default_language.id}")
     execute("ALTER TABLE shops ALTER COLUMN language_id SET NOT NULL")
 
     add_foreign_key :shops, :language_id, :name => "shops_language_id_fk"
