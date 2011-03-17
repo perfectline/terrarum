@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.files = [
     "README.markdown",
     "install.rb",
+    "lib/generators/all.rb",
     "lib/generators/countries/countries_generator.rb",
     "lib/generators/countries/templates/migration.rb",
     "lib/generators/countries/templates/model.rb",
